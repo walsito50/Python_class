@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de estadisticas de Altura</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link href="../static/main.css" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    
+    <table class="default" align="center">
+        <tr>
+      
+          <td>
+      
+    
+      
+            <div class="container bg-white  p-5 rounded-lg m-3">
+      
+      <h1>Estadisticas de Altura</h1>
+      <h3>Por favor llene los formularios para obtener estadisticas de altura</h3>
+      
+
+      <div class="mensaje">
+
+        {{text | safe}}
+        
+      </div>
+      
+      <form class="row g-3" action="{{url_for('exito')}}" method="POST">
+          <div class="col-auto">
+              <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+              <input title="Tu correo esta a salvo con nostros" type="email" placeholder= "Introduce tu correo" name="varemail" required="" class="form-control">
+          </div>
+          <div class="col-auto">
+              <label for="exampleFormControlInput1" class="form-label">Altura en cm</label>
+            <input title="Tus datos son confidenciales" placeholder= "Cm" type="number" min="50", max="300" name="varaltura" required="" class="form-control">
+          </div>
+          <div class="col-auto">
+              <br>
+            <button type="submit" class="btn btn-outline-primary">Enviar</button>
+          </div>
+        </form>
+      
+       </td>
+      
+        </tr>
+      
+       </table>
+
+
+</body>
+</html>
